@@ -114,39 +114,39 @@ function AnimatedDragon(): JSX.Element {
   );
 }
 
-function AnimatedText(): JSX.Element {
-  const textRef = useRef<HTMLDivElement>(null);
+// function AnimatedText(): JSX.Element {
+//   const textRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (textRef.current) {
-      gsap.fromTo(
-        textRef.current,
-        { opacity: 0, y: -50 },
-        { opacity: 1, y: 0, duration: 2, delay: 1, ease: 'power3.out' }
-      );
-    }
-  }, []);
+//   useEffect(() => {
+//     if (textRef.current) {
+//       gsap.fromTo(
+//         textRef.current,
+//         { opacity: 0, y: -50 },
+//         { opacity: 1, y: 0, duration: 2, delay: 1, ease: 'power3.out' }
+//       );
+//     }
+//   }, []);
 
-  return (
-    <Html center className='center'>
-      <div
-        ref={textRef}
-        style={{
-          color: '#ffffff',
-          fontSize: '2rem',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          // fontFamily: 'Fantasy',
-          background: 'rgba(0,0,0,0.4)',
-          padding: '1rem 2rem',
-          borderRadius: '12px',
-        }}
-      >
-        Legendary Dragon
-      </div>
-    </Html>
-  );
-}
+//   return (
+//     <Html center className='center'>
+//       <div
+//         ref={textRef}
+//         style={{
+//           color: '#ffffff',
+//           fontSize: '2rem',
+//           fontWeight: 'bold',
+//           textAlign: 'center',
+//           // fontFamily: 'Fantasy',
+//           background: 'rgba(0,0,0,0.4)',
+//           padding: '1rem 2rem',
+//           borderRadius: '12px',
+//         }}
+//       >
+//         Legendary Dragon
+//       </div>
+//     </Html>
+//   );
+// }
 
 export default function AnimatedModelScene(): JSX.Element {
   return (
