@@ -114,40 +114,6 @@ function AnimatedDragon(): JSX.Element {
   );
 }
 
-// function AnimatedText(): JSX.Element {
-//   const textRef = useRef<HTMLDivElement>(null);
-
-//   useEffect(() => {
-//     if (textRef.current) {
-//       gsap.fromTo(
-//         textRef.current,
-//         { opacity: 0, y: -50 },
-//         { opacity: 1, y: 0, duration: 2, delay: 1, ease: 'power3.out' }
-//       );
-//     }
-//   }, []);
-
-//   return (
-//     <Html center className='center'>
-//       <div
-//         ref={textRef}
-//         style={{
-//           color: '#ffffff',
-//           fontSize: '2rem',
-//           fontWeight: 'bold',
-//           textAlign: 'center',
-//           // fontFamily: 'Fantasy',
-//           background: 'rgba(0,0,0,0.4)',
-//           padding: '1rem 2rem',
-//           borderRadius: '12px',
-//         }}
-//       >
-//         Legendary Dragon
-//       </div>
-//     </Html>
-//   );
-// }
-
 export default function AnimatedModelScene(): JSX.Element {
   return (
     
@@ -159,7 +125,7 @@ export default function AnimatedModelScene(): JSX.Element {
       <directionalLight position={[5, 10, 5]} intensity={1} color="#ffffff" />
       <Suspense fallback={<Html center><div style={{ color: 'white' }}>Loading Dragon...</div></Html>}>
         <AnimatedDragon />
-        {/* <AnimatedText /> */}
+       
         <Preload all />
       </Suspense>
       <OrbitControls enableZoom enablePan={false} autoRotate autoRotateSpeed={0.8} />
